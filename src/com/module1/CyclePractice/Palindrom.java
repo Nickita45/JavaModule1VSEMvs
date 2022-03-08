@@ -35,7 +35,7 @@ public class Palindrom {
     public static void main(String[] args) {
         String stringToTestPalindrome1 = "Лег на храм, и дивен и невидим архангел";
         String stringToTestPalindrome2 = "Искать такси";
-        String stringToTestPalindrome3 = "Искать таксиБ"; //ошибки
+        String stringToTestPalindrome3 = "Искать таксиБ"; //ошибка
         System.out.println(isPalindrome1(stringToTestPalindrome1));
         System.out.println(isPalindrome1(stringToTestPalindrome2));
         System.out.println(isPalindrome1(stringToTestPalindrome3));
