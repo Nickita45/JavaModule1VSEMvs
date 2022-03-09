@@ -15,17 +15,29 @@ public class HarryPoterTextAnalys {
 
         String[] words = content.split(" +");
         printArray(words,20);
+
         //Я сделал через массив, но лучше через словарь и перебор не for i тогда и будет быстрее
         //HashSet<String> hashSet = new HashSet<String>(Arrays.asList(words));
-        String contentWithoudDup = deDup(content);
+        String contentWithoudDup = removeDubFromString(words);//deDup(content);
         String[] wordsWithoudDup = contentWithoudDup.split(" +");
         Arrays.sort(wordsWithoudDup);
 
         printCountDuplicates(wordsWithoudDup,words);
 
     }
+    //Функция получения строки черех хеш
     public static String deDup(String s) {
         return new LinkedHashSet<String>(Arrays.asList(s.split(" +"))).toString().replaceAll("[^A-Za-z ]","");
+    }
+    public static String removeDubFromString(String[] s)
+    {
+        String result = "";
+        for(int i=0;i<s.length;i++)
+        {
+            if(!result.contains(s[i]))
+                result+=s[i]+" ";
+        }
+        return  result;
     }
     public static void printCountDuplicates(String[] deBupString,String[] original)
     {
