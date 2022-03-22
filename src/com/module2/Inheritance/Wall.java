@@ -1,11 +1,12 @@
 package com.module2.Inheritance;
 
 import com.module2.ClassDesign.Rectangle;
+import com.module2.Polymorphism.IFileType;
 
 import java.awt.*;
 import java.util.Objects;
 
-public class Wall extends Rectangle {
+public class Wall extends Rectangle implements IFileType {
     private int depth = 1;
     private String material;
     private int costForOneMeter = 5;
@@ -109,5 +110,33 @@ public class Wall extends Rectangle {
                 ", density=" + density +
                 ", countRowsSetka=" + countRowsSetka +
                 '}';
+    }
+
+    @Override
+    public String getXML() {
+        return "<wall>" +
+                "<width>"+this.getWidth()+"</width>"+
+                "<length>"+this.getLength()+"</length>"+
+                "<depth>"+depth+"</depth>"+
+                "<material>"+material+"</material>"+
+                "<costForOneMeter>"+costForOneMeter+"</costForOneMeter>"+
+                "<color>"+color+"</color>"+
+                "<density>"+density+"</density>"+
+                "<countRowsSetka>"+countRowsSetka+"</countRowsSetka>"+
+                "</wall>";
+    }
+
+    @Override
+    public String getJSON() {
+        return "{wall{" +
+                "\"width\":"+this.getWidth()+","+
+                "\"length\":"+this.getLength()+","+
+                "\"depth\":"+depth+","+
+                "\"material\":\""+material+"\","+
+                "\"costForOneMeter\":"+costForOneMeter+","+
+                "\"color\":\""+color.toString()+"\","+
+                "\"density\":"+density+","+
+                "\"countRowsSetka\":"+countRowsSetka+","+
+                "}}";
     }
 }
