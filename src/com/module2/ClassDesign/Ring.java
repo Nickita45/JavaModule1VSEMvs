@@ -1,8 +1,10 @@
 package com.module2.ClassDesign;
 
+import com.module2.FactoryBuilder.IFigureWithRadius;
+
 import java.util.Objects;
 
-public class Ring {
+public class Ring implements IFigureWithRadius {
     private int R;
     private int r;
 

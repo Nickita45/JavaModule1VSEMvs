@@ -1,8 +1,10 @@
 package com.module2.ClassDesign;
 
+import com.module2.FactoryBuilder.IFigureWithRadius;
+
 import java.util.Objects;
 
-public class Cone {
+public class Cone implements IFigureWithRadius {
     private int height;
     private int radius;
 
