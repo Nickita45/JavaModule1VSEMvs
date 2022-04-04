@@ -135,7 +135,7 @@ public class Student extends Person{
                 ", grand=" + grand +
                 ", averageMark=" + averageMark +
                 ", isBudget=" + isBudget +
-                '}';
+                '}'+super.toString();
     }
 
     @Override
@@ -163,5 +163,39 @@ public class Student extends Person{
             symb = 'C';
         return symb;
     }
+    public static class Builder{
+        private Student newStudent;
 
+        public Builder() {
+            this.newStudent = new Student();
+        }
+        public Builder withFirstName(String name)
+        {
+            newStudent.setFirstName(name);
+            return this;
+        }
+        public Builder withSecondName(String name)
+        {
+            newStudent.setSecondName(name);
+            return this;
+        }
+        public Builder withPatronymic(String name)
+        {
+            newStudent.setPatronymic(name);
+            return this;
+        }
+        public Builder withInstituteName(String instituteName)
+        {
+            newStudent.setInstituteName(instituteName);
+            return this;
+        }
+        public Builder withNumberOfStudentCard(int numberStudentCard)
+        {
+            newStudent.setNumberOfStudentCard(numberStudentCard);
+            return this;
+        }
+        public Student build(){
+            return newStudent;
+        }
+    }
 }

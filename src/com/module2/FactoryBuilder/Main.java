@@ -1,6 +1,7 @@
 package com.module2.FactoryBuilder;
 
 import com.module2.ClassDesign.Cylinder;
+import com.module2.Inheritance.Student;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,5 +15,12 @@ public class Main {
         System.out.println(MyInteger.isPrime(43));
         System.out.println(MyInteger.isPrime(97));
         System.out.println(MyInteger.isPrime(98));
+        //Builder
+        Student student = new Student.Builder()
+                .withFirstName("John")
+                .withSecondName("Lock")
+                .withInstituteName("ONPU")
+                .withNumberOfStudentCard(2593).build();
+        System.out.println(student.toString());
     }
 }
