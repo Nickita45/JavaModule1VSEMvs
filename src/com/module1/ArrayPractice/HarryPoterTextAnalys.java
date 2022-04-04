@@ -37,7 +37,7 @@ public class HarryPoterTextAnalys {
             if(!result.contains(s[i]))
                 result+=s[i]+" ";
         }
-        return  result;
+        return result;
     }
     public static void printCountDuplicates(String[] deBupString,String[] original)
     {
