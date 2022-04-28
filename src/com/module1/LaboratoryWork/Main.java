@@ -10,7 +10,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException {
         String content = new String(Files.readAllBytes(Paths.get("C:\\Users\\John Locke\\IdeaProjects\\HelloWorld\\src\\com\\module1\\ArrayPractice\\harry.txt")));
-        String contentReplaced = content.replaceAll("[^A-Za-z ]", "");
+        String contentReplaced = content.replaceAll("[^A-Za-z ]", " ");
         String[] words = contentReplaced.split(" +");
         String[] lines = content.split("\\r?\\n");
 

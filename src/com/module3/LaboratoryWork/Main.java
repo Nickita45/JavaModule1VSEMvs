@@ -1,4 +1,4 @@
-package com.modele3.LaboratoryWork;
+package com.module3.LaboratoryWork;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ public class Main {
         int min = list.stream().mapToInt(e -> e.getTicketCost()).min().orElse(0);
         System.out.println("Min: "+min);
         double avg = list.stream().mapToDouble(e -> e.getTicketCost()).average().orElse(0);
-        System.out.println("Min: "+min);
+        System.out.println("Avg: "+avg);
 
         int sumLowCostPrice = list.stream().filter(e -> e instanceof FlyLowCost).mapToInt(e -> e.getTicketCost()).sum();
         int sumBusinessClassPrice = list.stream().filter(e -> e instanceof FlyBusinessClass).mapToInt(e -> e.getTicketCost()).sum();

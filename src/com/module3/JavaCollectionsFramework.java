@@ -1,7 +1,5 @@
-package com.modele3;
+package com.module3;
 
-import javax.swing.*;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.*;
@@ -83,7 +81,7 @@ public class JavaCollectionsFramework {
         return arr;
     }
 
-    static class Watch {
+    public static class Watch {
         private long startTime;
         private long endTime;
 
@@ -97,7 +95,9 @@ public class JavaCollectionsFramework {
 
         public void totalTime(String s) {
             stop();
-            System.out.println(s + (endTime - startTime));
+
+            double elapsedTimeInSecond = (double) (endTime - startTime) / 1_000_000_000;
+            System.out.println(s + elapsedTimeInSecond);
         }
     }
 }

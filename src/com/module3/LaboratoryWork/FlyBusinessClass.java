@@ -1,4 +1,4 @@
-package com.modele3.LaboratoryWork;
+package com.module3.LaboratoryWork;
 
 import java.util.Objects;
 
