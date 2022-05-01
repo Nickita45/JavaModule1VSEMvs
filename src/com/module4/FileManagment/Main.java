@@ -19,13 +19,13 @@ public class Main {
         String content = new String(Files.readAllBytes(Paths.get(path)));
         String[] lines = content.split("\n");
 
-        List<String> listWithErrors = Arrays.stream(lines).filter(line -> line.contains("Exception")).collect(Collectors.toList());
+        List<String> listWithErrors = Arrays.stream(lines).filter(line -> line.contains("ERROR")).collect(Collectors.toList());
         System.out.println(listWithErrors.size());
         watch.totalTime( "Using readAllBytes and split function = ");
 
         watch.start();
         List<String> stringListReadAllLine = Files.readAllLines(Paths.get("C:\\Users\\John Locke\\IdeaProjects\\HelloWorld\\src\\com\\module4\\FileManagment\\logs.txt"))
-                .stream().filter(line -> line.contains("Exception")).collect(Collectors.toList());;
+                .stream().filter(line -> line.contains("ERROR")).collect(Collectors.toList());;
         System.out.println("Total number of lines:"+stringListReadAllLine.size());
         watch.totalTime( "Using readAllLines = ");
 
