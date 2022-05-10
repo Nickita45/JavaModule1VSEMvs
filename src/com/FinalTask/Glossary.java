@@ -54,6 +54,7 @@ public class Glossary {
         String stringCommaSeparated = entriesCapitals.stream().limit(20)
                 .map(key -> key.getKey() + "=" + key.getValue())
                 .collect(Collectors.joining("\n"));
+        stringCommaSeparated+="\nNames:"+entriesCapitals.stream().map(key -> key.getKey()).collect(Collectors.joining(","));
         writeToFileData(stringCommaSeparated,20,"Harry Potter");
 
     }
