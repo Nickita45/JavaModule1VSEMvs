@@ -1,0 +1,25 @@
+The first 20 words of the sorted dictionary, taking into account only proper names (with a capital letter). 
+The number of words encountered in the text was counted.
+Text - Harry Potter
+The work was done by Mykyta Plotnikov
+
+Aaah=1
+Aargh=1
+Abbott=1
+Abou=1
+About=9
+Absolutely=2
+According=1
+Adalbert=1
+Add=1
+Adrian=2
+Africa=1
+African=1
+After=19
+Against=4
+Ages=4
+Agrippa=3
+Ah=11
+Aha=1
+Ahead=1
+Ahem=1
