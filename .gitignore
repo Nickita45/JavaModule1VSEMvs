@@ -77,3 +77,4 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 src/com/module4/FileManagment/logs.txt
+src/main/java/com/module4/FileManagment/logs.txt
